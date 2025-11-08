@@ -1,0 +1,6 @@
+# Malicious IP addresses from threat feeds
+192.168.1.100
+10.0.0.5
+203.0.113.1
+198.51.100.2
+# Add more IPs as needed

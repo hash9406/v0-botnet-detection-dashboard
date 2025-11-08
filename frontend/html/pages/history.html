@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan History - Botnet Detection</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="nav-logo">BotNet Shield</h1>
+            <div class="nav-links">
+                <a href="landing.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="history.html" class="active">History</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="container">
+            <h1>Scan History</h1>
+
+            <div class="history-controls">
+                <button id="refreshBtn" class="refresh-btn">Refresh History</button>
+            </div>
+
+            <div class="history-table-container">
+                <table class="history-table" id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>Date & Time</th>
+                            <th>File Name</th>
+                            <th>File Size</th>
+                            <th>Risk Score</th>
+                            <th>Verdict</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr>
+                            <td colspan="6" class="loading">Loading history...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;"></div>
+        </div>
+    </main>
+
+    <!-- Modal for detailed results -->
+    <div id="detailsModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Scan Details</h2>
+            <div id="scanDetails"></div>
+        </div>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/history.js"></script>
+</body>
+</html>

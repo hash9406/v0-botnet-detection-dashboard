@@ -1,0 +1,6 @@
+# Malicious domains blacklist
+malicious.example.com
+botnet-domain.net
+c2-server.org
+phishing-site.com
+# Add more domains as needed
